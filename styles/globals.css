@@ -20,3 +20,7 @@ a {
 }
 
 :focus {outline:0 !important; box-shadow: none!important;}
+
+.markdown-body h1 {
+  text-align: center
+}

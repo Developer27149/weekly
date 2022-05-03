@@ -5,3 +5,6 @@ export const isEmptyObject = (obj: any) => {
     !Array.isArray(obj)
   );
 };
+
+export const redirectToGithub = () =>
+  window.open("https://github.com/youyiqin/weekly");

@@ -31,7 +31,7 @@ export default function SearchModal() {
   return (
     <Flex
       justify={"center"}
-      align={"center"}
+      align={"start"}
       w="100vw"
       h="100vh"
       m="0"
@@ -55,6 +55,7 @@ export default function SearchModal() {
         p="2em"
         onClick={(e) => e.stopPropagation()}
         borderRadius={12}
+        mt={"10em"}
       >
         <InputGroup border={"none"}>
           <InputLeftAddon
