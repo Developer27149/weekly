@@ -1,6 +1,16 @@
 ---
-Date: 2022-05-02,
-Intro: "妙才的周刊发布了，🎉 或许是一个好的开始"
+Date: "2022-05-02"
+intro: "妙才的周刊发布了，🎉 或许是一个好的开始"
+miniImg: "https://images.unsplash.com/photo-1577938006455-9c04410b9a67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTE1MTE3ODQ&ixlib=rb-1.2.1&q=80&w=400"
+tags:
+  - 幸福
+  - 猫咪
+  - 绝望
+  - 负面情绪
+  - 匿名邮件
+  - 字体压缩
+  - 树莓派
+  - Git
 ---
 
 # 东张西望，周刊闲聊

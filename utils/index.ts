@@ -1,12 +1,14 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { marked } from "marked";
+import { remark } from "remark";
+import html from "remark-html";
+import dayjs from "dayjs";
 
 const fsPromise = fs.promises;
 const rootPath = process.cwd();
 
-export const getAllPostArticles = async () => {
+export const getAllDateDirItems = async () => {
   try {
     const basePath = path.join(rootPath, "posts");
     const dirs = await fsPromise.readdir(basePath);
@@ -16,7 +18,7 @@ export const getAllPostArticles = async () => {
       [key: string]: {
         articlePath: string;
         parentDir: string;
-      };
+      }[];
     } = {};
     dirs.forEach((dir) => {
       // read md files and save data;
@@ -32,38 +34,101 @@ export const getAllPostArticles = async () => {
           .forEach((article) => {
             // read article and save data
             const articlePath = path.join(dateDirPath, article);
-            records[article] = {
-              articlePath,
-              parentDir: dir,
-            };
+            if (!records[article]) {
+              records[article] = [
+                {
+                  articlePath,
+                  parentDir: dir,
+                },
+              ];
+            } else {
+              records[article].push({
+                articlePath,
+                parentDir: dir,
+              });
+            }
           });
       }
     });
     return records;
   } catch (error) {
-    console.log(error);
+    console.log("get all article failed!", error);
   }
 };
 
 export const getAllPostMetadata = async () => {
   try {
-    const articles = await getAllPostArticles();
-    if (!articles) return [];
-    const records: { [key: string]: {} } = {};
-    const tasks = Object.keys(articles).map(async (article) => {
-      const { articlePath, parentDir } = articles[article];
-      const rawContent = await fsPromise.readFile(articlePath, "utf-8");
-      const { data } = matter(rawContent);
-      records[parentDir] = {
-        ...data,
-        weeklyName: article.replace(/\.md$/, ""),
-      };
+    const dateItems = await getAllDateDirItems();
+    if (!dateItems) return [];
+    const records: { [key: string]: {}[] } = {};
+    const tasks = Object.keys(dateItems).map((dateStr: string) => {
+      const articles = dateItems[dateStr];
+      articles.forEach((article) => {
+        const { articlePath, parentDir } = article;
+        const rawContent = fs.readFileSync(articlePath, "utf-8");
+        const { data } = matter(rawContent);
+
+        if (records[parentDir]) {
+          records[parentDir].push({
+            ...data,
+            weeklyName: articlePath
+              .replace(`${rootPath}/posts/${parentDir}/`, "")
+              .replace(/\.md$/, ""),
+          });
+        } else {
+          records[parentDir] = [
+            {
+              ...data,
+              weeklyName: articlePath
+                .replace(`${rootPath}/posts/${parentDir}/`, "")
+                .replace(/\.md$/, ""),
+            },
+          ];
+        }
+      });
     });
     await Promise.all(tasks);
+
     return records;
   } catch (error) {
-    console.log("get all post metadata failed!!!");
+    console.log("get all post metadata failed!", error);
   }
 };
 
-const getArticleHtml = async (slug: string) => {};
+export const getArticleHtml = async (slug: string) => {
+  try {
+    const dateItems = await getAllDateDirItems();
+    let targetPath: string;
+    let contentString: string = "";
+    if (dateItems) {
+      if (
+        Object.values(dateItems).some((item) => {
+          if (
+            item.some((metaData) => {
+              const { articlePath } = metaData;
+              if (articlePath.endsWith(slug + ".md")) {
+                targetPath = articlePath;
+                return true;
+              }
+              return false;
+            })
+          ) {
+            // 得到了目标,读取 targetPath 文件
+            const rawContent = fs.readFileSync(targetPath, "utf-8");
+            const { content } = matter(rawContent);
+            // Use remark to convert markdown into HTML string
+            contentString = content;
+            return true;
+          }
+          return false;
+        })
+      ) {
+        return remark().use(html).process(contentString);
+      }
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.log("read raw article failed!", error);
+  }
+};

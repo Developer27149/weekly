@@ -1,6 +1,9 @@
 ---
-Date: 2022-05-09,
-Intro: "周刊的第二篇内容"
+Date: "2022-05-09"
+intro: "周刊的第二篇内容"
+miniImg: 'https://images.unsplash.com/photo-1577938006455-9c04410b9a67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTE1MTE3ODQ&ixlib=rb-1.2.1&q=80&w=400'
+tags: 
+	- 终端工具
 ---
 
 # 东张西望，周刊闲聊

@@ -13,13 +13,16 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "dayjs": "^1.11.1",
     "framer-motion": "^6",
     "gray-matter": "^4.0.3",
     "jotai": "^1.6.5",
     "marked": "^4.0.15",
     "next": "12.1.5",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/marked": "^4.0.3",
