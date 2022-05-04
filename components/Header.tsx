@@ -24,18 +24,24 @@ export default function Header() {
         maxW="960px"
         align="center"
       >
-        <Box mr="auto">
-          <Box display="inline-block" fontSize="3em">
-            妙才
+        <Link href="/">
+          <Box mr="auto" cursor={"pointer"}>
+            <Box display="inline-block" fontSize="3em">
+              妙才
+            </Box>
+            周刊
           </Box>
-          周刊
-        </Box>
+        </Link>
         <SearchBox />
         <Flex justify={"end"} align="center" ml="4em" gap={4}>
           <Link href="/">
-            <FcHome cursor="pointer" />
+            <span>
+              <FcHome cursor="pointer" />
+            </span>
           </Link>
-          <ChatIcon />
+          <a href="#comment">
+            <ChatIcon />
+          </a>
           <BsGithub onClick={redirectToGithub} cursor="pointer" />
         </Flex>
       </Flex>

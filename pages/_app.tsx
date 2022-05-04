@@ -7,6 +7,7 @@ import SearchModal from "@/components/SearchBox/SearchModal";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
+      {/* @ts-ignore */}
       <Layout>
         <Component {...pageProps} />
         <SearchModal />

@@ -36,6 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+// @ts-ignore
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
   const htmlContent = await getArticleHtml(slug);
   return {

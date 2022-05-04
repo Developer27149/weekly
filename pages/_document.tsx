@@ -30,7 +30,7 @@ export default function Document() {
           data-loading="lazy"
           crossOrigin="anonymous"
           async
-        ></script>
+        />
       </body>
     </Html>
   );

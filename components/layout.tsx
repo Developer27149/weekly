@@ -10,8 +10,7 @@ const Layout: React.FC<Props> = ({ children }) => (
   <>
     <Header />
     <Box as="main">{children}</Box>
-    {/* <Footer /> */}
-    <Box className="giscus" maxW="960px" w="100vw" m="2em auto"></Box>
+    <Box className="giscus" id="comment" maxW="960px" w="100vw" m="2em auto" />
   </>
 );
 export default Layout;
