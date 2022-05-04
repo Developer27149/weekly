@@ -5,13 +5,10 @@
   "private": true,
   "scripts": {
     "lint": "next lint",
-    "replaceFilePaths": "node replacer.js",
     "dev": "next dev",
-    "build": "next build && next export -o build && yarn replaceFilePaths",
+    "build": "next build",
     "start": "next start",
-    "export": "next export -o build && yarn replaceFilePaths",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "export": "next export"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
@@ -37,7 +34,6 @@
     "@types/react-dom": "18.0.3",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
-    "gh-pages": "^3.2.3",
     "replace-in-file": "^6.3.2",
     "typescript": "4.6.4"
   }

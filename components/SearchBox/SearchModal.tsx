@@ -110,7 +110,10 @@ export default function SearchModal() {
               )
               .map((item) => {
                 return (
-                  <Link href={`/weekly/${item.weeklyName}`}>
+                  <Link
+                    href={`/weekly/${item.weeklyName}`}
+                    key={item.weeklyName}
+                  >
                     <Flex
                       cursor="pointer"
                       key={item.weeklyName}

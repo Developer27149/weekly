@@ -1,8 +1,19 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import { getAllDateDirItems, getArticleHtml } from "@/utils/index";
+import {
+  getAllDateDirItems,
+  getArticleHtml,
+  getAllPostMetadata,
+} from "@/utils/index";
 import { Box } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { postsAtoms } from "@/atoms/postsAtom";
+import { useAtom } from "jotai";
 
-const Weekly = ({ post }: { post: string }) => {
+const Weekly = ({ post, initState }: { post: string; initState: any }) => {
+  const [, setPostState] = useAtom(postsAtoms);
+  useEffect(() => {
+    setPostState(initState);
+  }, []);
   return (
     <>
       <Box maxW="960px" w="100vw" m="0 auto" p="1em">
@@ -28,7 +39,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: path,
       },
     }));
-  console.log(paths);
 
   return {
     paths,
@@ -39,9 +49,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // @ts-ignore
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
   const htmlContent = await getArticleHtml(slug);
+  const initState = await getAllPostMetadata();
+
   return {
     props: {
       post: htmlContent?.value,
+      initState,
     },
   };
 };

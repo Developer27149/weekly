@@ -10,11 +10,7 @@ const Home: NextPage = (props) => {
   useEffect(() => {
     setPostState(props);
   }, []);
-  return (
-    <>
-      <HomeSections />
-    </>
-  );
+  return <HomeSections />;
 };
 
 export default Home;
@@ -22,8 +18,6 @@ export default Home;
 export async function getStaticProps() {
   // Get external data from the file system, API, DB, etc.
   const metaData = await getAllPostMetadata();
-  console.log(metaData);
-
   // The value of the `props` key will be
   //  passed to the `Home` component
   return {

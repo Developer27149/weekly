@@ -13,7 +13,7 @@ export default function Header() {
       <Head>
         <title>妙才周刊</title>
         <meta name="description" content="妙才的科技人文周刊，欢迎订阅👏🏻" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Flex
         position="sticky"
