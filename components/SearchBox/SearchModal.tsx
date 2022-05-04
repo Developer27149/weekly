@@ -10,20 +10,22 @@ import { useAtom } from "jotai";
 import { globalAtom } from "@/atoms/globalAtom";
 import { keywordAtom } from "@/atoms/keyword";
 import { postsAtoms } from "@/atoms/postsAtom";
-import { SearchIcon, ExternalLinkIcon, ArrowRightIcon } from "@chakra-ui/icons";
-import { useRef, useEffect, useState } from "react";
+import { SearchIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { useRef, useEffect } from "react";
 import Tags from "@/components/Tags";
 import Link from "next/link";
 
 export default function SearchModal() {
   const [state, setGlobalState] = useAtom(globalAtom);
   const [keyword, setKeyword] = useAtom(keywordAtom);
-  const [postsState, setPostState] = useAtom(postsAtoms);
+  const [postsState] = useAtom(postsAtoms);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (state.isSearchEnable) {
       inputRef.current?.focus();
+    } else {
+      setKeyword("");
     }
   }, [state.isSearchEnable]);
 
