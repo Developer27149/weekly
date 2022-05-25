@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { useAtom } from "jotai";
 import { postsAtoms } from "@/atoms/postsAtom";
-import { keywordAtom } from "@/atoms/keyword";
 import { isEmptyObject } from "@/utils/help";
 import dayjs from "dayjs";
 import SectionBox from "../SectionBox";
@@ -19,7 +18,6 @@ import Tags from "@/components/Tags";
 
 export default function HomeSections() {
   const [postState] = useAtom(postsAtoms);
-  const [keyword] = useAtom(keywordAtom);
 
   if (!postState || isEmptyObject(postState)) return null;
   return (
@@ -27,7 +25,7 @@ export default function HomeSections() {
       defaultIndex={[0]}
       allowMultiple
       width={"min(90vw, 960px)"}
-      m="0 auto"
+      m="0 auto 10rem"
     >
       {Object.keys(postState).map((monthStr, idx) => {
         const [newestPost, ...lastPosts] = postState?.[monthStr] || [];
@@ -58,7 +56,7 @@ export default function HomeSections() {
               </Flex>
               <ul>
                 {lastPosts.map((item, idx: number) => (
-                  <li key={idx}>
+                  <li key={idx} style={{ padding: "1rem 0" }}>
                     <Flex justify={"space-between"}>
                       <Link href={`/weekly/${item.weeklyName}`}>
                         {item.intro}
