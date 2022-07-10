@@ -1,6 +1,6 @@
 ---
 Date: "2022-05-29"
-intro: "周刊的第四篇内容"
+intro: "边缘项目心得：如何坚持"
 miniImg: "https://images.unsplash.com/photo-1604946591005-c481923435b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTM4Mzg1MzI&ixlib=rb-1.2.1&q=80&w=400"
 tags:
   - 边缘项目心得
@@ -63,15 +63,15 @@ tags:
 
 使用这个工具，你得懂一些`canvas`和`svg`。
 
-##### Apollo 
+##### Apollo
 
 [App Store 上的“Apollo-记录你的影视生活”](https://apps.apple.com/cn/app/apollo-%E8%AE%B0%E5%BD%95%E4%BD%A0%E7%9A%84%E5%BD%B1%E8%A7%86%E7%94%9F%E6%B4%BB/id1616467801)：一款 IOS 上记录影视生活的软件，你可以使用 Apollo 来给已看的电影/剧集添加评分、评论、记录自己的观影方式等，也可以用它来追踪目前在追的剧集的观看进度、或者创建自己的「待看清单」。
 
-依赖iCloud同步，没有花哨社交，很靠谱的软件。
+依赖 iCloud 同步，没有花哨社交，很靠谱的软件。
 
 ##### 团队协作 - Superlist
 
-[Superlist](https://www.superlist.com/)：处于Beta阶段的超赞团队协作应用，界面效果非常炫酷，小团队或许可以尝尝鲜。
+[Superlist](https://www.superlist.com/)：处于 Beta 阶段的超赞团队协作应用，界面效果非常炫酷，小团队或许可以尝尝鲜。
 
 ##### One-goal
 
@@ -85,11 +85,11 @@ tags:
 
 ##### WSL 和 Electron
 
-[Building an Electron App in Windows with WSL 2 and Ubuntu | Beekeeper Studio](https://www.beekeeperstudio.io/blog/building-electron-windows-ubuntu-wsl2)：介绍如何在 windows下利用 `WSL2` 构建和调试 Electron 应用
+[Building an Electron App in Windows with WSL 2 and Ubuntu | Beekeeper Studio](https://www.beekeeperstudio.io/blog/building-electron-windows-ubuntu-wsl2)：介绍如何在 windows 下利用 `WSL2` 构建和调试 Electron 应用
 
-##### web开发中的字体
+##### web 开发中的字体
 
-[自定义字体 - 腾讯Web前端 IMWeb 团队社区 | blog | 团队博客](https://imweb.io/topic/5a016f791f0e50753869bfa3)：介绍了在`web`开发中可以实际应用到的自定义字体技术的使用示例和注意事项。
+[自定义字体 - 腾讯 Web 前端 IMWeb 团队社区 | blog | 团队博客](https://imweb.io/topic/5a016f791f0e50753869bfa3)：介绍了在`web`开发中可以实际应用到的自定义字体技术的使用示例和注意事项。
 
 ##### 字体反爬虫
 
@@ -98,8 +98,6 @@ tags:
 ##### 公开 API 收集
 
 [Discover the best APIs and SaaS products | API Tracker](https://apitracker.io/)：收集了国外一系列的免费接口，开发者们或许可以在这里找到适合自己的免费接口。
-
-
 
 ##### 图表库
 

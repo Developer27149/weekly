@@ -1,6 +1,6 @@
 ---
 Date: "2022-05-23"
-intro: "周刊的第三篇内容"
+intro: "分享一些非常好用的软件"
 miniImg: "https://images.unsplash.com/photo-1520580413066-ac45756bdc71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTMyMTMxNTY&ixlib=rb-1.2.1&q=80&w=400"
 tags:
   - 终端工具

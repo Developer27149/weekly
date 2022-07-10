@@ -2368,6 +2368,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+mac-scrollbar@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.npmjs.org/mac-scrollbar/-/mac-scrollbar-0.10.1.tgz#ffc0885d750db96add6a2a44a5c918a926fe0a29"
+  integrity sha512-iil2C6lR0C9EJNrTxrqQmWvvG1ziMy1yihC3zNGdhcTItJR3LZ6jE46I58rUi9i8VLiu2hj/NSsL/qsUGRjZtQ==
+
 marked@^4.0.15:
   version "4.0.15"
   resolved "https://registry.npmmirror.com/marked/-/marked-4.0.15.tgz#0216b7c9d5fcf6ac5042343c41d81a8b1b5e1b4a"

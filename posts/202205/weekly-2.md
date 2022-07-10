@@ -1,11 +1,11 @@
 ---
 Date: "2022-05-09"
-intro: "周刊的第二篇内容"
-miniImg: 'https://images.unsplash.com/photo-1577938006455-9c04410b9a67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTE1MTE3ODQ&ixlib=rb-1.2.1&q=80&w=400'
-tags: 
+intro: "命令行终端是 Developer 的浪漫"
+miniImg: "https://images.unsplash.com/photo-1577938006455-9c04410b9a67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTE1MTE3ODQ&ixlib=rb-1.2.1&q=80&w=400"
+tags:
   - 终端工具
   - 素材资源
-  - 脚手架	
+  - 脚手架
   - Figma
   - 前端资源
   - 书籍分享
@@ -41,7 +41,7 @@ tags:
 
 > [Download Free Vector Art, Stock Photos & Stock Video Footage](https://www.vecteezy.com/)
 
-Vecteezy提供免费+收费的优质矢量艺术图，注册即可可以在你的项目或应用中免费使用部分资源。
+Vecteezy 提供免费+收费的优质矢量艺术图，注册即可可以在你的项目或应用中免费使用部分资源。
 
 ##### 前端学习资源
 
@@ -53,11 +53,11 @@ Vecteezy提供免费+收费的优质矢量艺术图，注册即可可以在你�
 
 学一点设计：[Learn Design with Figma](https://www.figma.com/resources/learn-design/getting-started/)
 
-##### 谷歌前端入门HTML/CSS指南
+##### 谷歌前端入门 HTML/CSS 指南
 
 [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
 
-##### web开发者大师 Dr.Axel Rauschmayer书籍分享
+##### web 开发者大师 Dr.Axel Rauschmayer 书籍分享
 
 [Exploring JS: JavaScript books for programmers](https://exploringjs.com/)
 
@@ -87,10 +87,10 @@ Fig 是一个具有`IDE`风格的终端补全的开源工具，其支持目前�
 
 印尼开发者`sozonome`开发的前端脚手架，支持:
 
-- `TypeScript` 
+- `TypeScript`
 - `Chakra-UI`
 - `Next.js`
-- `Eslint/Pretter/husky/lint-staged` 
+- `Eslint/Pretter/husky/lint-staged`
 - `React`
 - `PWA option`
 - `SEO optimization/sitemap`
@@ -98,5 +98,4 @@ Fig 是一个具有`IDE`风格的终端补全的开源工具，其支持目前�
 
 ##### 最后
 
-😰晚了两三天发布，虽迟但到！
-
+😰 晚了两三天发布，虽迟但到！

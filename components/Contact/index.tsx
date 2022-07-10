@@ -1,6 +1,7 @@
-import { EmailIcon } from "@chakra-ui/icons";
 import { Avatar, Flex } from "@chakra-ui/react";
+
 import { BsGithub } from "react-icons/bs";
+import { EmailIcon } from "@chakra-ui/icons";
 import { GrBlog } from "react-icons/gr";
 import Link from "next/link";
 
@@ -29,15 +30,15 @@ export default function Contact() {
       >
         <p>web开发者，欢迎一起合作、交流、分享资讯！</p>
         <Flex align={"center"} justify="end" gap={2}>
-          <Link href="https://github.com/youyiqin">
+          <a href={"https://github.com/youyiqin"}>
             <BsGithub />
-          </Link>
-          <Link href="mailto:rivenqinyy@gmail.com">
+          </a>
+          <a href={"mailto:rivenqinyy@gmail.com"}>
             <EmailIcon />
-          </Link>
-          <Link href="https://youyiqin.github.io/blog">
+          </a>
+          <a href={"https://youyiqin.github.io/blog"}>
             <GrBlog />
-          </Link>
+          </a>
         </Flex>
       </Flex>
     </Flex>

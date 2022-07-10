@@ -1,19 +1,22 @@
 import {
-  Flex,
   Box,
+  Divider,
+  Flex,
   Input,
   InputGroup,
   InputLeftAddon,
-  Divider,
 } from "@chakra-ui/react";
-import { useAtom } from "jotai";
+import { ExternalLinkIcon, SearchIcon } from "@chakra-ui/icons";
+import { useEffect, useRef } from "react";
+
+import Link from "next/link";
+import { MacScrollbar } from "mac-scrollbar";
+import Tags from "@/components/Tags";
 import { globalAtom } from "@/atoms/globalAtom";
 import { keywordAtom } from "@/atoms/keyword";
 import { postsAtoms } from "@/atoms/postsAtom";
-import { SearchIcon, ExternalLinkIcon } from "@chakra-ui/icons";
-import { useRef, useEffect } from "react";
-import Tags from "@/components/Tags";
-import Link from "next/link";
+import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 
 export default function SearchModal() {
   const [state, setGlobalState] = useAtom(globalAtom);
@@ -29,7 +32,14 @@ export default function SearchModal() {
     }
   }, [state.isSearchEnable]);
 
+  const router = useRouter();
+
+  useEffect(() => {
+    setGlobalState({ isSearchEnable: false });
+  }, [router.asPath]);
+
   if (!state.isSearchEnable) return null;
+
   return (
     <Flex
       justify={"center"}
@@ -45,19 +55,22 @@ export default function SearchModal() {
       bottom={0}
       zIndex={99999999}
       bg="#00000073"
+      onScroll={(e) => e.stopPropagation()}
       onClick={(e) => {
         e.stopPropagation();
         setGlobalState((prev) => ({ ...prev, isSearchEnable: false }));
       }}
     >
       <Box
-        w="min(50vw, 600px)"
+        w="min(60vw, 800px)"
         maxH="50vh"
         bg="white"
         p="2em"
         onClick={(e) => e.stopPropagation()}
         borderRadius={12}
         mt={"10em"}
+        display="flex"
+        flexDir={"column"}
       >
         <InputGroup border={"none"}>
           <InputLeftAddon
@@ -97,43 +110,51 @@ export default function SearchModal() {
         </InputGroup>
         {/* 搜索结果 */}
         <Divider />
-        {
-          // values is [[weekly1, weekly2], [weekly3],...]
-          keyword !== "" &&
-            Object.values(postsState)
-              .flat()
-              .filter(
-                (weekly) =>
-                  weekly.tags
-                    .map((i) => i.toUpperCase())
-                    .includes(keyword.toUpperCase()) ||
-                  weekly.weeklyName.includes(keyword) ||
-                  weekly.intro.includes(keyword)
-              )
-              .map((item) => {
-                return (
-                  <Link
-                    href={`/weekly/${item.weeklyName}`}
-                    key={item.weeklyName}
-                  >
-                    <Flex
-                      cursor="pointer"
+        <MacScrollbar className="flex-grow">
+          {
+            // values is [[weekly1, weekly2], [weekly3],...]
+            keyword !== "" &&
+              Object.values(postsState)
+                .flat()
+                .filter(
+                  (weekly) =>
+                    weekly.tags
+                      .map((i) => i.toUpperCase())
+                      .some((i) => i.includes(keyword.toUpperCase())) ||
+                    weekly.weeklyName.includes(keyword) ||
+                    weekly.intro.includes(keyword)
+                )
+                .map((item) => {
+                  return (
+                    <Link
+                      href={`/weekly/${item.weeklyName}`}
                       key={item.weeklyName}
-                      align="center"
-                      color="gray.400"
-                      p=".5em"
-                      my="1em"
                     >
-                      <ExternalLinkIcon />
-                      <Box color="black" fontWeight="bold" mr="auto" ml="1em">
-                        <Box mb="1em">{item.intro}</Box>
-                        <Tags tags={item.tags} justify={"flex-start"} />
-                      </Box>
-                    </Flex>
-                  </Link>
-                );
-              })
-        }
+                      <Flex
+                        cursor="pointer"
+                        key={item.weeklyName}
+                        align="center"
+                        color="gray.400"
+                        p=".5em"
+                        my="1em"
+                      >
+                        <ExternalLinkIcon />
+                        <Box
+                          color="black"
+                          fontWeight="bold"
+                          mr="auto"
+                          ml="1em"
+                          pr={4}
+                        >
+                          <Box mb="1em">{item.intro}</Box>
+                          <Tags tags={item.tags} justify={"flex-start"} />
+                        </Box>
+                      </Flex>
+                    </Link>
+                  );
+                })
+          }
+        </MacScrollbar>
       </Box>
     </Flex>
   );

@@ -1,6 +1,6 @@
 ---
 Date: "2022-06-13"
-intro: "妙才周刊 - 5"
+intro: "阅读器、编辑器、云盘"
 miniImg: "https://images.unsplash.com/photo-1617129724623-84f1d2fd78f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTUwNDE5MzM&ixlib=rb-1.2.1&q=80&w=400"
 tags:
   - Windows
@@ -18,22 +18,18 @@ tags:
 
 作者：妙才
 
-
-
 记录笔者每周看到的那些值得分享（或许）的科技和其他讯息，周一发布（或多或少）。
 
 > 欢迎 👏🏻 推荐一些值得分享的讯息
 
-
-
 #### 工具
 
-##### windows系统资源
+##### windows 系统资源
 
 - [MSDN, 我告诉你 - 做一个安静的工具站](https://msdn.itellyou.cn/)
 - [TechBench by WZT (v4.1.1)](https://tb.rg-adguard.net/public.php)
 
-原版Windows系统和软件下载，需要纯净版资源的可以在这里下载。
+原版 Windows 系统和软件下载，需要纯净版资源的可以在这里下载。
 
 ##### 临时云盘
 
@@ -41,11 +37,9 @@ tags:
 
 不限速不限空间的临时限时云盘
 
-
-
 ##### EPUB 阅读器
 
-> [EPUB阅读器 | TXT阅读器 | Neat Reader | 超赞的全平台电子书阅读器，全球百万用户共同的选择](https://www.neat-reader.cn/)
+> [EPUB 阅读器 | TXT 阅读器 | Neat Reader | 超赞的全平台电子书阅读器，全球百万用户共同的选择](https://www.neat-reader.cn/)
 
 免费版本的阅读器就够用了，经常看电子书的可以看看。
 
@@ -54,8 +48,6 @@ tags:
 > [Fluent Reader](https://hyliu.me/fluent-reader/)
 
 作者还是伯克利的学生
-
-
 
 ##### WeekTodo
 
@@ -77,7 +69,7 @@ tags:
 
 > [react-icons](https://react-icons.github.io/react-icons) 项目地址
 
-在前端开发中，`icon`几乎是绕不过的点，UI设计中有许多地方用得上。`react-icons`项目有一系列的免费`icon`提供给开发者使用。
+在前端开发中，`icon`几乎是绕不过的点，UI 设计中有许多地方用得上。`react-icons`项目有一系列的免费`icon`提供给开发者使用。
 
 ##### 3、react 滚动条
 

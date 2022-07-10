@@ -1,6 +1,6 @@
 ---
 Date: "2022-06-26"
-intro: "妙才周刊 - 7"
+intro: "JavaScript编程书籍推荐"
 miniImg: "https://images.unsplash.com/photo-1582822003814-6b048e9346e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTYzNDI2NTU&ixlib=rb-1.2.1&q=80&w=400"
 tags:
   - 富文本编辑器

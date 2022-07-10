@@ -1,9 +1,9 @@
+import HomeSections from "@/components/HomeSections";
 import type { NextPage } from "next";
-import { useEffect } from "react";
+import { getAllPostMetadata } from "@/utils/index";
 import { postsAtoms } from "@/atoms/postsAtom";
 import { useAtom } from "jotai";
-import { getAllPostMetadata } from "@/utils/index";
-import HomeSections from "@/components/HomeSections";
+import { useEffect } from "react";
 
 const Home: NextPage = (props) => {
   const [, setPostState] = useAtom(postsAtoms);

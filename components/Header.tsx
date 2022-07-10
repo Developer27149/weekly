@@ -1,10 +1,11 @@
-import Head from "next/head";
-import { Flex, Box } from "@chakra-ui/react";
-import SearchBox from "@/components/SearchBox";
-import { ChatIcon } from "@chakra-ui/icons";
+import { Box, Flex } from "@chakra-ui/react";
+
 import { BsGithub } from "react-icons/bs";
+import { ChatIcon } from "@chakra-ui/icons";
 import { FcHome } from "react-icons/fc";
+import Head from "next/head";
 import Link from "next/link";
+import SearchBox from "@/components/SearchBox";
 import { redirectToGithub } from "@/utils/help";
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
         maxW="960px"
         align="center"
       >
-        <Link href="/">
+        <Link href={"/"}>
           <Box mr="auto" cursor={"pointer"}>
             <Box display="inline-block" fontSize="3em">
               妙才
@@ -34,7 +35,7 @@ export default function Header() {
         </Link>
         <SearchBox />
         <Flex justify={"end"} align="center" ml="4em" gap={4}>
-          <Link href="/">
+          <Link href={"/"}>
             <span>
               <FcHome cursor="pointer" />
             </span>

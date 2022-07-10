@@ -1,8 +1,9 @@
+import { Box, Flex } from "@chakra-ui/react";
+
+import Contact from "./Contact";
 import Header from "@/components/Header";
 // import Footer from "./footer";
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
-import Contact from "./Contact";
 
 type Props = {};
 

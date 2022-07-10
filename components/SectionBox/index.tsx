@@ -1,4 +1,5 @@
-import { Flex, Heading, Image, Box } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+
 import Link from "next/link";
 import Tags from "../Tags";
 
@@ -11,7 +12,7 @@ interface IProps {
 
 export default function SectionBox({ title, tags, img, slug }: IProps) {
   return (
-    <Flex justify="space-between">
+    <Flex justify="space-between" gap={8}>
       <Box
         _hover={{
           transform: "scale(1.05)",
