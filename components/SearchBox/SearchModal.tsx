@@ -35,7 +35,7 @@ export default function SearchModal() {
   const router = useRouter();
 
   useEffect(() => {
-    setGlobalState({ isSearchEnable: false });
+    setGlobalState((prev) => ({ ...prev, isSearchEnable: false }));
   }, [router.asPath]);
 
   if (!state.isSearchEnable) return null;
