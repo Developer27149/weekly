@@ -1,6 +1,6 @@
 ---
 Date: "2022-07-11"
-intro: "Vue的服务端渲染方案"
+intro: "Vue脚手架和挑战练习题"
 miniImg: "https://images.unsplash.com/photo-1553603227-2358aabe821e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyNjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTgxNDYyNzU&ixlib=rb-1.2.1&q=80&w=400"
 tags:
   - vue 脚手架
