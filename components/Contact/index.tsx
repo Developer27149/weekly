@@ -13,6 +13,7 @@ export default function Contact() {
       color={"blackAlpha.800"}
       align="center"
       fontSize={"14px"}
+      w={{ md: "500px", lg: "300px" }}
       maxH="80px"
       boxShadow={"5px 10px 5px 0px #eee"}
     >
